@@ -24,7 +24,6 @@ Una aplicación fullstack desarrollada con **Vue 3** (frontend) y **ASP.NET Core
 
 ## 🚀 Tecnologías utilizadas
 
-- **Frontend:** Vue 3 + Vite, Axios
 - **Backend:** ASP.NET Core 8, Entity Framework Core
 - **Autenticación:** JSON Web Tokens (JWT)
 - **Base de datos:** SQL Server
@@ -39,21 +38,6 @@ Una aplicación fullstack desarrollada con **Vue 3** (frontend) y **ASP.NET Core
 - * Opcional [Docker y Docker Compose](https://www.docker.com/)
 
 ---
-
-## 🧱 Instalación de la Base de Datos
-
-1. Abrir SQL Server Management Studio o tu cliente preferido.
-2. Ejecutar los scripts SQL: 
-    🔹/sql/krispy_sales_schema.sql  
-    🔹/sql/vwSaleDetails.sql
-    🔹/sql/data_test_generator.sql
-3. Asegúrate de que la cadena de conexión en `appsettings.json` coincida con tu entorno.
-
-Esto iniciará la Web API en la URL: https://localhost:7299 (o como esté configurado en launchSettings.json) 
-Swagger disponible en: http://localhost:7299/swagger
-
-Esto iniciará la app Vue en: http://localhost:55508
-
 
 ---
 
@@ -77,14 +61,6 @@ dotnet run
 ```
 Esto iniciará la Web API en la URL: https://localhost:7299 (o como esté configurado en launchSettings.json).
 
-#### FrontEnd
-1. En el explorador de soluciones, hacer clic derecho sobre la carpeta `vue-code` y seleccionar "Abrir con Terminal".
-2. Ejecutar:
-```bash
-npm install
-npm run dev
-```
-Esto iniciará la app Vue en: http://localhost:55508
 
 ## ⚙️ Funcionalidades
 
@@ -95,17 +71,6 @@ Esto iniciará la app Vue en: http://localhost:55508
 - Creación de ventas protegida con JWT
 - Validaciones básicas y manejo de errores
 - Script SQL incluido para generar las tablas necesarias
-
-### 🔹 Frontend (Vue.js)
-- Pantalla de login con validación y manejo de sesión JWT
-- Pantalla principal:
-  - Lista de ventas (sin autenticación)
-  - Formulario para agregar venta (requiere token)
-- Gestión del token con `localStorage`
-- Axios para consumo de API y manejo de errores
-
----
-
 
 ## 🐳 PLUS Levantamiento en Docker 
 
@@ -122,6 +87,11 @@ docker push sales-module-api:master
 ### Ejecutar backend y frontend:
 ```bash
 docker-compose up --build
+
+https://localhost:5001/.well-known/openid-configuration
+https://localhost:5001/connect/token
+
+
 ```
 
 ---

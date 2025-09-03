@@ -1,6 +1,4 @@
-# 💼 Aplicación Fullstack – Vue.js + .NET Core API + SQL Server
-
-Una aplicación fullstack desarrollada con **Vue 3** (frontend) y **ASP.NET Core 6** (backend), conectada a **SQL Server** y asegurada con **JWT**. Este proyecto demuestra habilidades en desarrollo de APIs REST, autenticación, arquitectura en capas, consumo de APIs desde frontend moderno y persistencia de datos.
+# 💼 Identity Server
 
 ---
 
